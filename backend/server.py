@@ -509,6 +509,9 @@ async def add_customer_props(cid: str, data: LinkProps, user=Depends(get_current
 
 @api.delete("/customers/{cid}/properties/{pid}")
 async def remove_customer_prop(cid: str, pid: str, user=Depends(get_current_user)):
+    c = await db.customers.find_one({"id": cid})
+    if not c or c["owner_id"] != user["id"]:
+        raise HTTPException(status_code=403, detail="Not authorized")
     await db.customer_property.update_one({"customer_id": cid, "property_id": pid}, {"$set": {"deleted": True}})
     return {"success": True}
 
