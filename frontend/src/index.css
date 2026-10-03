@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0B192C;
+  --navy-2: #0F172A;
+  --navy-hover: #1E293B;
+  --bg: #F8FAFC;
+  --green: #059669;
+}
+
+* { -webkit-font-smoothing: antialiased; }
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: #0F172A;
+}
+
+h1, h2, h3, h4, .font-head { font-family: 'Outfit', sans-serif; }
+
+::selection { background: #0B192C; color: #fff; }
+
+/* thin scrollbar */
+.scroll-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-up { animation: fade-up 0.45s cubic-bezier(0.16,1,0.3,1) both; }
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; --foreground: 222 47% 11%;
+    --card: 0 0% 100%; --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%; --popover-foreground: 222 47% 11%;
+    --primary: 213 61% 11%; --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%; --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%; --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%; --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 51%; --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%; --input: 214 32% 91%; --ring: 213 61% 11%;
+    --radius: 0.75rem;
+  }
+}
+@layer base {
+  * { @apply border-border; }
+}

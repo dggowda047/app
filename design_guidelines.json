@@ -1,0 +1,156 @@
+{
+  "project_name": "PropConsult CRM - Premium Property Consultant Application",
+  "app_type": "hybrid_fullstack (mobile-first responsive CRM / SaaS app)",
+  "visual_theme": {
+    "archetype": "THE PERFORMANCE PRO / CRED-INSPIRED FINTECH LUXURY",
+    "primary_palette": "Premium White (#FFFFFF), Deep Navy Blue (#0B192C / #0F172A), Slate Grey (#64748B / #F8FAFC)",
+    "accent_palette": "Emerald Green (#10B981 for Shared Tick / Win), Gold / Amber (#F59E0B for Pipeline / High Value), Indigo (#6366F1 for Actions)",
+    "vibe": "Clean CRED-like visual quality, Minimal, Elegant, Spacious, Fast, Trustworthy, Modern Indian Real Estate SaaS"
+  },
+  "typography": {
+    "font_family_heading": "Outfit, Plus Jakarta Sans, sans-serif",
+    "font_family_body": "Plus Jakarta Sans, Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "headline_h1": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white",
+    "headline_h2": "text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100",
+    "headline_h3": "text-lg sm:text-xl font-semibold tracking-normal text-slate-800 dark:text-slate-200",
+    "card_title": "text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100",
+    "body_text": "text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed",
+    "label_overline": "text-xs font-semibold tracking-wider uppercase text-slate-400 dark:text-slate-400",
+    "rules": [
+      "DO NOT use Inter for main headings — use Outfit or Plus Jakarta Sans.",
+      "Headings over 24px MUST use tight tracking (tracking-tight).",
+      "All overline labels MUST be uppercase with wider letter spacing (tracking-wider)."
+    ]
+  },
+  "colors": {
+    "light": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "surface_elevated": "#FFFFFF",
+      "primary_navy": "#0B192C",
+      "primary_navy_hover": "#1E293B",
+      "text_main": "#0F172A",
+      "text_muted": "#64748B",
+      "border": "#E2E8F0",
+      "border_accent": "#CBD5E1",
+      "shared_tick_green": "#059669",
+      "shared_tick_bg": "#ECFDF5",
+      "pipeline_accent": "#3B82F6",
+      "badge_bg": "#F1F5F9"
+    },
+    "dark": {
+      "background": "#0B132B",
+      "surface": "#1C2541",
+      "surface_elevated": "#2A365B",
+      "primary_navy": "#3A506B",
+      "primary_navy_hover": "#4B6584",
+      "text_main": "#F8FAFC",
+      "text_muted": "#94A3B8",
+      "border": "#2E3B5B",
+      "border_accent": "#475569",
+      "shared_tick_green": "#10B981",
+      "shared_tick_bg": "#064E3B",
+      "pipeline_accent": "#60A5FA",
+      "badge_bg": "#1E293B"
+    },
+    "rules": [
+      "No pure #000000 or pure black background; tint greys with rich cool blue/slate.",
+      "Never use full transparent backgrounds in headers, overlays, or dropdown menus.",
+      "Primary brand color must be used intentionally for main CTAs and highlights only."
+    ]
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Tailwind standard (p-2, p-4, p-6, p-8, p-12). Use generous internal card padding (p-5 or p-6) to avoid edge collision.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "card_radius": "rounded-2xl sm:rounded-3xl",
+    "shadows": "shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)] dark:shadow-[0_4px_25px_-4px_rgba(0,0,0,0.4)]",
+    "responsive_breakpoints": {
+      "mobile": "grid-cols-1, bottom navigation bar fixed at bottom (z-40), swipeable cards/tables",
+      "tablet": "grid-cols-2 or sidebar layout, collapsible details",
+      "desktop": "sidebar layout + main canvas, full multi-column kanban board for 8 deal stages"
+    }
+  },
+  "components_and_features": {
+    "auth_screen": "Phone + OTP single consultant login experience (no user-type selection). Warm CRED-style dark/navy hero panel + crisp white card.",
+    "onboarding": "Interactive 3-slide onboarding experience with smooth progress dots, feature callouts, and 'Get Started' action.",
+    "top_navbar": "Sticky header (backdrop-blur-xl bg-white/85 dark:bg-slate-900/85 z-40 border-b). Includes Brand Logo, Search Bar, Quick Add Button, Notification Bell with unread badge count, and Profile Avatar Menu (Profile, Notifications, Shared Properties, Bin, Settings, More, Logout).",
+    "kpi_cards": "4 clickable dashboard metrics cards with subtle hover lift (-translate-y-1): Total Properties, Active Customers, Open Follow-ups, Deal Value Pipeline in Indian Rupees (₹).",
+    "property_wizard": "4-step wizard (Category & Type → Property Details → Amenities & Features → Photo Upload & Review) with step indicator, Indian currency dual-range sliders (₹0 to ₹50 Crore), validation, and live preview.",
+    "property_cards": "Rounded cards featuring high-quality primary photo, property status badge (Sale/Purchase/Rent/Lease), category (Residential/Commercial/Land), price formatted in Cr/Lakh (e.g. ₹2.5 Cr), location, and GREEN SHARED TICK INDICATOR if shared with consultants.",
+    "photo_lightbox": "Swipeable photo modal/lightbox with gallery thumbnails, full-screen viewer, photo counter, and close control.",
+    "customer_module": "Customer directory with requirement tags, budget range, preferred location, and Many-to-Many Property Linking drawer/modal.",
+    "follow_up_tracker": "Follow-up list with status filters (Pending, Today, Overdue, Completed), priority badges, due date countdowns, and quick log action.",
+    "deal_pipeline": "8-stage Kanban board (Lead Identified → Requirement Analysis → Property Match → Site Visit Scheduled → Negotiation → Token/Advance → Documentation → Won/Lost) with drag/click stage advancement, deal value summaries, and win/loss reason modal.",
+    "consultant_sharing": "Property sharing modal to collaborate with other brokers, green verified tick badge indicator on shared listings, and 'Shared Properties' dedicated view.",
+    "bin_and_recycle": "Bin module displaying soft-deleted properties and customers with 1-click 'Restore' or 'Permanent Delete' functionality.",
+    "empty_states": "Rich empty state components with custom illustration/icons, friendly micro-copy, and primary CTA buttons (e.g. 'No properties listed yet', 'No matching customers found').",
+    "loading_states": "Pulse skeleton cards matching property and customer card shapes."
+  },
+  "image_urls": {
+    "residential": [
+      {
+        "url": "https://images.unsplash.com/photo-1619218070141-bcfeb8b93074?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Luxury Modern Villa Architecture",
+        "category": "Property Photo - Residential"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1625201212921-1c5e5557d451?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Modern High-rise Residential Apartment",
+        "category": "Property Photo - Residential"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1659962911037-bc6bd6d4e813?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Gated Community Luxury Home",
+        "category": "Property Photo - Residential"
+      }
+    ],
+    "commercial": [
+      {
+        "url": "https://images.pexels.com/photos/16370914/pexels-photo-16370914.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Contemporary Glass Commercial Office Building",
+        "category": "Property Photo - Commercial"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1785308269631-1c8661c36158?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Modern Office Space Interior",
+        "category": "Property Photo - Commercial"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Consultant Profile Avatar - Female",
+        "category": "User Profile"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Consultant Profile Avatar - Male",
+        "category": "User Profile"
+      }
+    ]
+  },
+  "testing_and_accessibility": {
+    "data_testid_rule": "ALL interactive and key informational elements MUST include a kebab-case data-testid attribute.",
+    "examples": [
+      "data-testid=\"phone-login-input\"",
+      "data-testid=\"otp-submit-btn\"",
+      "data-testid=\"kpi-total-properties-card\"",
+      "data-testid=\"add-property-wizard-btn\"",
+      "data-testid=\"property-card-101\"",
+      "data-testid=\"green-shared-tick-badge\"",
+      "data-testid=\"kanban-stage-negotiation\"",
+      "data-testid=\"customer-match-btn\"",
+      "data-testid=\"bin-restore-btn-101\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure the design feels ultra-premium like CRED / Apple / Linear — smooth cards, crisp typography, generous padding, and responsive layout.",
+    "Indian Currency Formatting: Always format monetary values in ₹ Cr (Crores) or ₹ Lakhs (e.g., ₹2.5 Cr, ₹75 Lakh). Provide dual-range sliders for ₹0 to ₹50 Crore requirement filtering.",
+    "Green Shared Tick: Property cards and detail view MUST display a distinct green verified tick badge when shared consultant-to-consultant.",
+    "Do NOT use generic admin styling. Implement custom rounded cards (rounded-2xl) with subtle border lines (border-slate-200/80 dark:border-slate-800) and elevated shadows.",
+    "Mobile Responsiveness: Mobile screens MUST render a fixed bottom navigation bar (Home, Properties, Customers, Deals, More) with clear icon active states.",
+    "Make sure all modals, slide-overs, lightboxes, and dropdown menus have semi-solid backdrop blur backgrounds (backdrop-blur-md bg-white/90 dark:bg-slate-900/90) with high contrast text.",
+    "All interactive components MUST include explicit kebab-case data-testid attributes."
+  ]
+}
